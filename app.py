@@ -149,4 +149,4 @@ with characteristic:
 
 with credit:
     st.markdown("""<div style="text-align: center; margin-top: 25px;"">
-    By <a href='https://www.mohamed-mazy.com'>Mohamed Mazy</a></div>""", unsafe_allow_html=True)
+    By <a target="_self" href='https://www.mohamed-mazy.com'>Mohamed Mazy</a></div>""", unsafe_allow_html=True)
