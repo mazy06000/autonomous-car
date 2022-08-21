@@ -25,6 +25,7 @@ max_len = 55
 header = st.container()
 uploading = st.container()
 characteristic = st.container()
+credit = st.container()
 
 with header:
     st.title('AUTONOMOUS CAR SEGMENTATION')
@@ -139,8 +140,12 @@ with characteristic:
     left.subheader("About Model")
     left.markdown('<div><b>Model:</b> Unet-MobileNet </div>',
                   unsafe_allow_html=True)
-    left.markdown('<div><b>Dataset:</b> ImageNet (uncased)</div>',
+    left.markdown('<div><b>Dataset:</b> ImageNet</div>',
                   unsafe_allow_html=True)
 
     right.subheader("Model performance")
     right.markdown('<div><b>Test IoU:</b> 63,6%</div>', unsafe_allow_html=True)
+
+
+with credit:
+    st.markdown("By <a href='www.mohamed-mazy.com'>Mohamed Mazy</a>", unsafe_allow_html=True)
