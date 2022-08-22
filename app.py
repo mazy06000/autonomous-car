@@ -22,10 +22,13 @@ catid2color = {0: [0, 0, 0],
                    7: [0, 0, 142]}
 max_len = 55
 
+_, protfolio, _ = st.columns([2,1,2])
+if protfolio.button("PORTFOLIO"):
+    st.markdown("""<meta http-equiv="refresh" content="0;url=https://www.mohamed-mazy.com">""", unsafe_allow_html=True)
+
 header = st.container()
 uploading = st.container()
 characteristic = st.container()
-credit = st.container()
 
 with header:
     st.title('AUTONOMOUS CAR SEGMENTATION')
@@ -147,6 +150,6 @@ with characteristic:
     right.markdown('<div><b>Test IoU:</b> 63,6%</div>', unsafe_allow_html=True)
 
 
-with credit:
-    st.markdown("""<div style="text-align: center; margin-top: 25px;"">
-    By <a target="_self" href='https://www.mohamed-mazy.com'>Mohamed Mazy</a></div>""", unsafe_allow_html=True)
+# with credit:
+#     st.markdown("""<div style="text-align: center; margin-top: 25px;"">
+#     By <button onClick='window.location.href="https://www.mohamed-mazy.com"'>Mohamed Mazy</button></div>""", unsafe_allow_html=True)
