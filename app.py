@@ -6,6 +6,7 @@ import tensorflow as tf
 import segmentation_models as sm
 import cv2
 import streamlit.components.v1 as components
+import webbrowser
 
 if "model" not in st.session_state:
     model = tf.keras.models.load_model("models/segment_self_driving.h5", custom_objects={'jaccard_loss':sm.losses.JaccardLoss(),
@@ -24,7 +25,8 @@ max_len = 55
 
 _, protfolio, _ = st.columns([2,1,2])
 if protfolio.button("PORTFOLIO"):
-    st.markdown("""<meta http-equiv="refresh" content="0;url=https://www.mohamed-mazy.com">""", unsafe_allow_html=True)
+    webbrowser.open_new_tab("https://www.mohamed-mazy.com")
+    # st.markdown("""<meta http-equiv="refresh" content="0;url=https://www.mohamed-mazy.com">""", unsafe_allow_html=True)
 
 header = st.container()
 uploading = st.container()
