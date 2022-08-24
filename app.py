@@ -23,10 +23,71 @@ catid2color = {0: [0, 0, 0],
                    7: [0, 0, 142]}
 max_len = 55
 
-_, protfolio, _ = st.columns([2,1,2])
-if protfolio.button("PORTFOLIO"):
-    webbrowser.open_new_tab("https://www.mohamed-mazy.com")
-    # st.markdown("""<meta http-equiv="refresh" content="0;url=https://www.mohamed-mazy.com">""", unsafe_allow_html=True)
+st.markdown("""
+                <style>
+                .centered-container {
+                background-color: #FFFFFF;
+                display: inline-flex;
+                padding: 5px;
+                }
+                .link {
+                color: back;
+                cursor: pointer;
+                font-weight: 400;
+                text-decoration: none;
+                }
+                .link--arrowed {
+                display: inline-block;
+                height: 2rem;
+                line-height: 2rem;
+                }
+                .link--arrowed .arrow-icon {
+                position: relative;
+                top: -1px;
+                -webkit-transition: -webkit-transform 0.3s ease;
+                transition: -webkit-transform 0.3s ease;
+                transition: transform 0.3s ease;
+                transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+                vertical-align: middle;
+                    transform: rotate(180deg);
+                }
+                .link--arrowed .arrow-icon--circle {
+                transition: stroke-dashoffset 0.3s ease;
+                stroke-dasharray: 95;
+                stroke-dashoffset: 95;
+                }
+                .link--arrowed:hover .arrow-icon {
+                transform: translate3d(5px, 0, 0);
+                    transform: rotate(180deg);
+                }
+                .link--arrowed:hover .arrow-icon--circle {
+                stroke-dashoffset: 0;
+                }
+
+                a:link { text-decoration: none; }
+                a:visited { text-decoration: none; }
+                a:hover { text-decoration: none; }
+                a:active { text-decoration: none; }
+                .css-znku1x a {
+                    color: black
+                }
+                </style>
+                
+                <div style="display:flex;justify-content: center; margin-bottom: 25px;"">
+                    <section class="centered-container">
+                    <a class="link link--arrowed" href="#">
+                    <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                        <g fill="none" stroke="black" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                            <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                            <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                        </g>
+                    </svg>
+                    Back to portfolio
+                    </a>
+                    </section>
+                </div>
+                """, unsafe_allow_html=True)
+
 
 header = st.container()
 uploading = st.container()
