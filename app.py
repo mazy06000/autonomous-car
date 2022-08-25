@@ -75,7 +75,7 @@ st.markdown("""
                 
                 <div style="display:flex;justify-content: center; margin-bottom: 25px;"">
                     <section class="centered-container">
-                    <a class="link link--arrowed" onclick="return backToProtfolio()" href="#">
+                    <a class="link link--arrowed" onclick="backToProtfolio(event)" href="https://www.mohamed-mazy.com">
                     <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                         <g fill="none" stroke="black" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
                             <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
