@@ -8,6 +8,8 @@ import cv2
 import streamlit.components.v1 as components
 import webbrowser
 
+st.set_page_config(layout='centered')
+
 if "model" not in st.session_state:
     model = tf.keras.models.load_model("models/segment_self_driving.h5", custom_objects={'jaccard_loss':sm.losses.JaccardLoss(),
                                                    'iou_score':sm.metrics.IOUScore(threshold=0.5)})
